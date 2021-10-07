@@ -309,14 +309,9 @@ function setting() {
       </div>
     <div style="display:flex; flex-direction: row-reverse;
     justify-content: right; margin-top:2px;">
-    <button style="border: 2px solid var(--accent_color);" onclick="` +
-    `set_storage_val(); document.getElementById('save_button').style.borderRadius =
-    '10px';
-    document.getElementById('save_button').style.border = '3px solid var(--accent_color)';` +
-    `">Save</button>
     <button style="border: 2px solid var(--accent_color);" onclick="popup_remove(); document.getElementById('save_button').style.borderRadius =
     '10px';
-    document.getElementById('save_button').style.border = '3px solid var(--accent_color)';">Cancel</button>
+    document.getElementById('save_button').style.border = '3px solid var(--accent_color)';">Okay</button>
     </div>
 </div>`;
 }
