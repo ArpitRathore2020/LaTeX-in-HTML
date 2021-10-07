@@ -1,3 +1,4 @@
+/* Google fonts */
 @import url("https://fonts.googleapis.com/css2?family=Pacifico&family=Roboto:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Playfair+Display:wght@500&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Faster+One&display=swap");
@@ -9,10 +10,11 @@
 * {
   padding: 0;
   border: 0;
+  font-family: "Roboto", sans-serif;
 }
 
 #main {
-  min-width: 1010px;
+  /* min-width: 1010px; */
 }
 
 html,
@@ -23,8 +25,12 @@ body,
 }
 
 :root {
+  /* --accent_color: green; */
   --accent_color: rgb(214, 20, 85);
-  /* --popup_height: 0; */
+}
+
+#snippets {
+  display: none;
 }
 
 button {
@@ -40,23 +46,7 @@ h1 {
   background-color: white;
 }
 
-/* .popup_animation {
-  animation-name: popup_animation;
-  animation-duration: 2s;
-  height: fit-content;
-} */
-
-/* @keyframes popup_animation {
-  from {
-    height: 0px;
-  }
-  to {
-    height: var(--popup_height);
-  }
-} */
-
 #popup .popup_main_div {
-  /* color: white; */
   width: fit-content;
   background-color: white;
   margin: auto;
@@ -77,6 +67,9 @@ h1 {
   margin: 0;
 }
 
+p {
+}
+
 body {
   background-color: black;
 }
@@ -90,10 +83,17 @@ body {
   animation-duration: 3s;
 }
 
+#logo {
+  cursor: pointer;
+  width: 200px;
+  position: absolute;
+  left: 100px;
+  top: 5px;
+}
+
 #input-wrapper button {
-  width: 100px;
+  /* width: 45px; */
   height: 40px;
-  /* position: absolute; */
   border-radius: 10px;
 }
 
@@ -109,7 +109,7 @@ body {
   animation-duration: 0.5s;
   color: var(--accent_color);
   background-color: white;
-  width: 100px;
+  width: 45px;
   border: 3px solid var(--accent_color);
 }
 
@@ -117,12 +117,12 @@ body {
   from {
     color: white;
     background-color: var(--accent_color);
-    width: 120px;
+    width: 50px;
   }
   to {
     color: var(--accent_color);
     background-color: white;
-    width: 100px;
+    width: 45px;
   }
 }
 
@@ -132,19 +132,19 @@ body {
   animation-duration: 0.5s;
   color: white;
   background-color: var(--accent_color);
-  width: 120px;
+  width: 50px;
 }
 
 @keyframes input-button-wrapper-button-hover-in {
   from {
     color: var(--accent_color);
     background-color: white;
-    width: 100px;
+    width: 45px;
   }
   to {
     color: white;
     background-color: var(--accent_color);
-    width: 120px;
+    width: 50px;
   }
 }
 
@@ -173,30 +173,35 @@ body {
 
 .CodeMirror {
   overflow-x: scroll;
-  font-family: "Faster One", cursive;
-  font-size: 20px;
+  font-size: 40px;
   width: 100%;
   border-radius: 15px;
-  /* min-height: 700px; */
-  min-height: 99%;
+  min-height: 95%;
+}
+.CodeMirror * {
+  font-family: monospace;
 }
 
 #Middle-section {
-  /* max-width: 10000px; */
   display: flex;
-  /* flex-wrap: wrap; */
+  flex-direction: row;
+}
 
-  /* justisfy-content: center; */
+#code_input {
+  display: flex;
+  width: 50%;
+  height: 100%;
 }
 
 #output {
-  width: 49%;
+  width: 48%;
   height: 100%;
   background-color: rgb(240, 236, 236);
   border: 4px solid white;
   border-radius: 10px;
   padding: 10px;
   margin-right: 7px;
+  margin-left: 7px;
   overflow-y: auto;
 }
 .flex-main {
@@ -241,8 +246,6 @@ center button {
 }
 
 #vertical-bar-wrapper {
-  /* background-color: white; */
-  /* border: 4px solid white; */
   border-radius: 7px;
   margin-left: 2px;
   margin-right: 2px;
@@ -291,7 +294,6 @@ center button {
 }
 
 #vertical-bar-wrapper button:hover {
-  /* background-color: var(--accent_color); */
   animation-name: in;
   animation-duration: 0.5s;
   background-color: var(--accent_color);
